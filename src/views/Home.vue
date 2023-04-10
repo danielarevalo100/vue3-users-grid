@@ -110,12 +110,12 @@ const people = [
     <div class='w-full flex flex-row flex-wrap' style='max-width: 1500px'>
       <div class='w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-6 flex' v-for='person in people'>
         <div class='rounded-lg box mt-8 flex-1'>
-          <div class='w-full bg-cover relative justify-center flex rounded-t-lg' style="height: 140px; background-image: url('/bg.jpg')">
+          <div class='w-full bg-cover relative justify-center flex rounded-t-lg card-head' style="height: 120px; background-image: url('/bg.jpg')">
             <div class='absolute inset-0 shadowed'></div>
-            <h3 class='text-white text-xl font-bold absolute bottom-4 text-center'>{{ person.name }}</h3>
-            <img src='/people.jpg' class='w-32 h-32 object-cover -top-8 rounded-full border-4 border-white absolute' alt=''>
+            <h3 class='text-white text-lg font-bold absolute bottom-2 text-center'>{{ person.name }}</h3>
+            <img src='/people.jpg' class='w-28 h-28 object-cover -top-8 rounded-full border-4 border-white absolute' alt=''>
           </div>
-          <div class='p-3'>
+          <div class='p-3 bg-white rounded-b-lg'>
             <div class='flex-row flex'>
              <img class='w-4' src='/icons/email_black.svg' alt=''>
              <p class='text-xs ml-2'>{{ person.email }}</p>
@@ -140,8 +140,28 @@ const people = [
 <style scoped>
 .box {
   box-shadow: 0px 20px 40px #3A79BD19;
+  transition: 0.2s;
+}
+.box:hover {
+  box-shadow: 0px 20px 40px #3A79BD5A;
 }
 .shadowed {
   background: transparent linear-gradient(180deg, #00000000 0%, #00000099 100%) 0% 0% no-repeat padding-box
+}
+
+.card-head {
+  transition: 0.2s;
+  background-size: 100%;
+}
+.box:hover .card-head{
+  background-size: 105%;
+
+}
+
+.card-head img{
+  transition: 0.2s;
+}
+.box:hover .card-head img{
+  transform: scale(1.1);
 }
 </style>
