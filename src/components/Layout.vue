@@ -55,7 +55,7 @@ const menuItems = [
 
         </div>
       </div>
-      <div class='flex md:flex-1 overflow-y-auto bg-[url("/bg.svg")] bg-no-repeat bg-bottom'>
+       <div class='flex md:flex-1 overflow-y-auto bg-[url("/bg.svg")] bg-no-repeat bg-right-bottom'>
         <RouterView/>
       </div>
     </div>
