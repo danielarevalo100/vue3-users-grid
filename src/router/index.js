@@ -9,6 +9,10 @@ const router = createRouter({
       name: 'home',
       component: Home
     },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/'
+    }
     // here i could add some more routes, all of them will be rendered inside the layout component
   ]
 })
